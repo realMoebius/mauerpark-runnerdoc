@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>RunnerDoc — Mauerpark Turf</title>
+<style>/* Erzeugt von tools/spielerlog/schriften-holen.mjs — nicht von Hand ändern. */
+/* SIL Open Font License 1.1, siehe LIZENZ.md */
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(schriften/big-shoulders-display-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(schriften/big-shoulders-display-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(schriften/big-shoulders-display-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(schriften/big-shoulders-display-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(schriften/ibm-plex-mono-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(schriften/ibm-plex-mono-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(schriften/ibm-plex-mono-600-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(schriften/ibm-plex-mono-600-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(schriften/source-serif-4-400-kursiv-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(schriften/source-serif-4-400-kursiv-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(schriften/source-serif-4-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(schriften/source-serif-4-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(schriften/source-serif-4-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(schriften/source-serif-4-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --grund: #0D0D1A; --flaeche: #14142B; --flaeche-2: #1E1E36; --flaeche-3: #252540;
+  --text: #EAEAF4; --text-leise: #C4C4DC; --text-stumm: #8A8AAC;
+  --linie: #4A4A6A; --linie-leise: #2E2E4E;
+  --primaer: #FFD080; --sekundaer: #B891FF; --auf-akzent: #14142B;
+  --kante: 10px;
+  --display: 'Big Shoulders Display', 'Arial Narrow', 'Helvetica Neue', sans-serif;
+  --lesen: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --zahl: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--grund); color: var(--text);
+  font-family: var(--lesen); font-size: 17px; line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+main, .kopf, footer { max-width: 44rem; margin: 0 auto; padding: 0 1.1rem; }
+h1, h2, h3, .marke, .tabs, .namensliste { font-family: var(--display); }
+h1 { font-size: 3rem; font-weight: 800; margin: .1em 0 .2em; letter-spacing: .01em; }
+h2 {
+  font-size: 1.7rem; font-weight: 800; margin: 2.4rem 0 1rem;
+  padding-bottom: .3rem; border-bottom: 2px solid var(--linie-leise);
+  scroll-margin-top: 1rem;
+}
+h3 { font-size: 1.3rem; font-weight: 600; margin: 0 0 .3rem; }
+p { margin: .7em 0; }
+a { color: var(--sekundaer); text-underline-offset: 2px; }
+code, .zahl { font-family: var(--zahl); font-size: .92em; }
+.stumm { color: var(--text-stumm); font-size: .92rem; }
+
+.kopf { padding-top: 2.2rem; padding-bottom: .5rem; }
+.ueber {
+  font-family: var(--display); font-size: .95rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--primaer); margin: 0;
+}
+.tabs { display: flex; gap: .6rem; margin: 1.2rem 0 0; flex-wrap: wrap; }
+.tabs a {
+  padding: .45rem 1rem; background: var(--flaeche-2); border: 1px solid var(--linie-leise);
+  color: var(--text-leise); text-decoration: none; font-size: 1.05rem;
+  clip-path: polygon(var(--kante) 0, 100% 0, 100% calc(100% - var(--kante)), calc(100% - var(--kante)) 100%, 0 100%, 0 var(--kante));
+}
+.tabs a:hover { background: var(--flaeche-3); color: var(--text); }
+
+.sitzung {
+  background: var(--flaeche); border: 1px solid var(--linie-leise);
+  margin: .7rem 0; padding: 0 1rem;
+}
+.sitzung[open] { padding-bottom: .8rem; }
+.sitzung > summary {
+  cursor: pointer; padding: .85rem 0; list-style: none;
+  display: flex; gap: .8rem; align-items: baseline; flex-wrap: wrap;
+}
+.sitzung > summary::-webkit-details-marker { display: none; }
+.sitzung > summary::before { content: '▸'; color: var(--primaer); }
+.sitzung[open] > summary::before { content: '▾'; }
+.datum { color: var(--text-stumm); font-size: .9rem; }
+.sitzung-titel { font-family: var(--display); font-size: 1.25rem; font-weight: 600; }
+.block-marke {
+  font-size: .8rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--primaer); margin: 1.4rem 0 .2rem;
+}
+.sitzung li { margin: .45em 0; }
+
+.namensliste { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0 0 1.6rem; }
+.namensliste a {
+  padding: .25rem .7rem; font-size: .95rem; text-decoration: none;
+  background: var(--flaeche-2); border: 1px solid var(--linie-leise); color: var(--text-leise);
+}
+.namensliste a:hover { background: var(--flaeche-3); color: var(--text); }
+
+.karte {
+  background: var(--flaeche); border: 1px solid var(--linie-leise);
+  padding: 1.1rem; margin: .8rem 0; scroll-margin-top: 1rem;
+  clip-path: polygon(var(--kante) 0, 100% 0, 100% calc(100% - var(--kante)), calc(100% - var(--kante)) 100%, 0 100%, 0 var(--kante));
+}
+.karte .werte { color: var(--text-stumm); font-style: italic; margin: 0 0 .6rem; font-size: .95rem; }
+.karte p { margin: .6em 0; }
+.marke {
+  font-family: var(--display); font-size: .72rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--primaer); margin-right: .4rem;
+}
+.alltag { color: var(--text-leise); font-size: .95rem; }
+.zurueck { display: inline-block; margin-top: .6rem; font-size: .85rem; color: var(--text-stumm); text-decoration: none; }
+
+blockquote {
+  margin: .8em 0; padding: .1rem 0 .1rem 1rem;
+  border-left: 3px solid var(--linie); color: var(--text-leise); font-style: italic;
+}
+.tabelle { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { text-align: left; padding: .4rem .6rem; border-bottom: 1px solid var(--linie-leise); }
+th { font-family: var(--display); color: var(--primaer); font-weight: 600; }
+hr { border: 0; border-top: 1px solid var(--linie-leise); margin: 1.4rem 0; }
+
+footer { margin: 3rem auto 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--linie-leise); }
+
+@media (max-width: 30rem) {
+  body { font-size: 16px; }
+  h1 { font-size: 2.4rem; }
+  main, .kopf, footer { padding: 0 .9rem; }
+}
+</style>
+</head>
+<body>
+<header class="kopf">
+<p class="ueber">Mauerpark Turf</p>
+<h1>RunnerDoc</h1>
+<p class="stumm">Was die Gruppe weiß — Sitzungen, Sprüche und die Leute im Kiez.</p>
+<nav class="tabs">
+<a href="#sitzungen">Sitzungen</a>
+<a href="#sprueche">Sprüche</a>
+<a href="#leute">Die Leute im Kiez</a>
+</nav>
+</header>
+<main>
+<section id="sitzungen">
+<h2>Sitzungen</h2>
+<details class="sitzung" open>
+<summary><span class="datum zahl">31.08.2024</span><span class="sitzung-titel">Übergabe &amp; erster TBC-Hinweis</span></summary>
+<h3 class="block-marke">Spielerlog</h3>
+<ul><li>Die Entführung von Dr. Emil von Hausen wird abgeschlossen. Bei der Extraktion geht etwas schief: ein Scharfschütze trifft von Hausen, er wird <strong>schwer verletzt</strong> übergeben.</li><li>Das Fluchtfahrzeug wird bei der Flucht <strong>beinahe fahruntüchtig</strong> — die Gruppe muss auf ein Ersatzfahrzeug wechseln.</li><li>Übergabe an Skeleton Key erfolgt, die Gruppe wird bezahlt.</li><li>Gegen Ende der Session wird ein <strong>Zelt mit einer toten Familie</strong> gefunden — erster sichtbarer Hinweis auf den TBC-Ausbruch im Turf. Wer genau den Fund gemacht hat, ist nicht mehr bekannt.</li><li>Die Gruppe hat zu diesem Zeitpunkt <strong>noch nicht auf den Fund reagiert</strong> — das war bewusst der letzte Satz der Session.</li></ul>
+</details>
+<details class="sitzung">
+<summary><span class="datum zahl">10.08.2024</span><span class="sitzung-titel">Der von-Hausen-Job</span></summary>
+<h3 class="block-marke">Spielerlog</h3>
+<p>Lorelei nimmt Kontakt zu Skeleton Key auf und erhält so einen Termin in der Kneipe Mauerfall. Die Runner sollen pünktlich erscheinen. Bei ihrem Eintreffen ist aber unklar, wo sie Skeleton Key finden, oder den Johnson oder wie die Anbahnung des Runs überhaupt vonstatten geht. Margott bestellt einen Drink namens Skelton Key, der offenbar dazu führt, dass die Elfe selbst in die Kneipe kommt und die Runner barsch in ein Hinterzimmer führt. Dort zweifelt sie an den Fähigkeiten der Runner und versucht einen sehr mickrigen Sold anzubieten. Dank Loreleis Verhandlungsgeschick einigt man sich jedoch auf die stattliche Summe von 16.500 Nuyen. Der Auftrag besteht darin den Arzt Emil von Hausen zu entführen und an einem Containerlager in der Nähe des BER zu verstauen. Der arzt arbeitet für Duras Pharmaceuticals und hat vor wenigen Tagen Presse gemacht mit eine, Verfahren um Bakterien genetisch so zu modifizieren, dass sie beliebige synthetische Arzneimittel herstellen. Die wäre ein Sprung nach vorne für die Pharmaindustrie, die auf diese Weise eine Menge Geld bei der Produktion sparen könnte. Einen Haken hat sie Sache jedoch, die Runner haben nur 3 Tage Zeit. Sie beginnen also sofort mit den Ermittlungen. Durch Margotss Kontakt Lada erhalten die Runner eine Karte der Kanalisation rund um den Stützpunkt von Duras Pharmaceuticals. Leider ist die Kanalisation unterhalb des Gebäudes abgesperrt und nicht in der Karte enthalten. Außerdem erfahren die Runner bei einem nächtlichen Erkundungsausflug, dass das Firmengebäude einen ganzen Block umfasst und nur eine Ein- und eine Ausfahrt hat, die durch ein großes Tor geschlossen sind. Daneben existieren noch 2 Personeneingänge. In der Mitte des Blocks befindet sich eine Ladezone, die 24/7 beläuchtet und offenbar auch bewacht ist. Die Tore sind durch Kameras gesichert. Sandro erkundet derweil den Weg von dem Konzerngebäude zum Containerlager. Er findet eine Route, die gut befahrbar ist, aber sich nicht eignet, falls es zu einer Verfolgungsjagd kommt, da der Verkehr zu dicht ist. Als Fluchtfahrzeug können die Runner einen Van aus einem Schmugglersafehaus nutzen, zumindest wenn sie es unversehrt und ohne polizeiliche Erfassung wieder zurückbringen können. Lorelei versucht Kontakt zu Christine Faust aufzunehmen, um über sie herauszufinden welche Konzerne ein Interesse an Emil von Hausens Entdeckung haben könnten.</p>
+</details>
+<details class="sitzung">
+<summary><span class="datum zahl">27.07.2024</span><span class="sitzung-titel">Vorbereitung der Extraktion</span></summary>
+<h3 class="block-marke">Spielerlog</h3>
+<p>Mit dem SIM in der Hand versuchen die Runner nun ihre Story an den Mann zu bringen. Der erste Versuch sämtliche Nachrichtenportale bzw. die Presse zu informieren schlägt fehl. Kein Nachrichten Outlet reagiert, also nimmt Lorelei die Sache in der Hand und postet auf Social Media. Durch ihren Ruf und die gute Darstellung geht der Clip viral und nötigt die Presseabteilung von PROTEUS zu einem Dementi auf Social Media. Möglicherweise ist damit das Miniarko-Projekt gestorben. Leider verhindert dies nicht, dass die weiße Limousine, welche schon zuvor durch Falk gesichtet wurde pünktlich zum Räumungstermin von Sandros Wohnung vor dem Kiez parkt und eine wütende Geschäftsfrau aussteigt. Es handelt sich um Elisabeth Seeger, welche für Izel Marwart arbeitet. Sie schimpft in ihr Kommlink, da die von ihr bestellte Lone Star Räumungstruppe nicht vor Ort ist. Stattdessen wird ein Patrouillenschläger vorbeigeschickt, welcher sehr vorsichtig in den Kiez eindringt und jede Gegenwehr durch sein einschüchterndes Aussehen unterdrückt. Er zerstört das Schloss von Sandros Wohnung mit seiner Pistole und verwüstet das Innere. Da Frau Seeger zunächst keine weitere Unterstützung zu erwarten hat zieht sie ab. Ein instabiler Frieden zieht ein. Die Runner stehen vor der Wahl, wie sie sich in Zukunft verteidigen wollen und entscheiden sich zunächst bei Skeleton Key nach einem Job umzuhören.</p>
+<h3 class="block-marke">Sprüche</h3>
+<p>Micha: &quot;Was ist das, was euch am meisten fehlt?&quot; - Arda: &quot;Der Rechtsstaat&quot;</p>
+</details>
+<details class="sitzung">
+<summary><span class="datum zahl">22.06.2024</span><span class="sitzung-titel">Die SIM und der Geist auf dem historischen Platz</span></summary>
+<h3 class="block-marke">Spielerlog</h3>
+<p>Nachdem alle eingetragenen Bewohner des Mauerpark Turfs Post von ihrem Vermieter (Izel Markwart) bekommen haben und Sandro sogar eine Räumungsklage, beginnen die Runner zu ermitteln. Durch Falk erfahren sie, dass ein paar Tage zuvor eine weiße Limousine am Außenrand des Turfs geparkt hat. Offenbar wurde ausgekundschafttet wer dort wohnt. Tiefere Recherche durch Shellshock erhärtete den Verdacht, dass Herr Markwart versucht den Turf zu räumen und das Gelände an die PROTEUS AG zu verkaufen. Diese möchte eine Miniarkologie mit dem Namen Mauerzentrum errichten und verspricht sich durch den Ort eine gewisse Werbewirksamkeit. Außerdem gelingt es Shellshock den Räumungstermin im Kalender von Herrn Markwart als erledigt zu kennzeichnen. Dies sollte wenigstens für Verwirrung sorgen und im besten Fall den Angriff auf den Turf verzögern. Zusätzlich drehen die Runner eine SIM bei der Lorelei in die Rolle einer intereressierten Mieterin der neuen Miniarko schlüpft. Im Laufe der SIM wird sie ein Opfer einer Geisterscheinung, welche offenbar den historischen Platz beschützt und nur besänftigt werden kann, indem man sich in den Staub wirft.</p>
+<h3 class="block-marke">Sprüche</h3>
+<p>Arda: &quot;Als Troll bin ich 3/4 schwarzwälder Mutterboden&quot;</p>
+</details>
+</section>
+<section id="sprueche">
+<h2>Sprüche</h2>
+<p>Was am Tisch hängen geblieben ist. Neueste oben.</p>
+<h3 class="block-marke">02.10.2026</h3>
+<ul><li>Elster: „Es gibt keine Milkruns.&quot;</li><li>(Out of Context) Lorelei: „Ohja, die Weißen!&quot; (voller Freude) {Es handelte sich um Toffifee}</li><li><em>Als Reaktion auf eine sich anbahnende Beziehung zwischen zwei Transtrollen</em> T4T = Troll for Troll. Troll on Troll Action</li></ul>
+<h3 class="block-marke">27.07.2024</h3>
+<ul><li>Micha: „Was ist das, was euch am meisten fehlt?&quot; — Arda: „Der Rechtsstaat&quot;</li></ul>
+<h3 class="block-marke">22.06.2024</h3>
+<ul><li>Arda: „Als Troll bin ich 3/4 schwarzwälder Mutterboden&quot;</li></ul>
+</section>
+<section id="leute">
+<h2>Die Leute im Kiez</h2>
+<nav class="namensliste">
+<a href="#nsc-agathe-bauer">Agathe Bauer</a>
+<a href="#nsc-ali-sahin">Ali Sahin</a>
+<a href="#nsc-bodo-klemm">Bodo mit dem Bagger</a>
+<a href="#nsc-christine">Christine</a>
+<a href="#nsc-danuta-nowak">Danuta Nowak</a>
+<a href="#nsc-doreen-kalisch">Doreen Kalisch</a>
+<a href="#nsc-emil-von-hausen">Dr. Emil von Hausen</a>
+<a href="#nsc-elisabeth-seeger">Elisabeth Seeger</a>
+<a href="#nsc-falk-eisenhauer">Falk Eisenhauer</a>
+<a href="#nsc-tobias-rehbein">Generalarzt Dr. Tobias Rehbein</a>
+<a href="#nsc-jonas">Jonas</a>
+<a href="#nsc-kolle">Kolle</a>
+<a href="#nsc-lada">Lada</a>
+<a href="#nsc-maria-faust">Maria Faust</a>
+<a href="#nsc-mario">Mario</a>
+<a href="#nsc-mirella">Mirella</a>
+<a href="#nsc-oma-trautchen">Oma Trautchen</a>
+<a href="#nsc-berat-pinsel">Pinsel</a>
+<a href="#nsc-porscheklaus">Porscheklaus</a>
+<a href="#nsc-renate-sommer">Renate Sommer</a>
+<a href="#nsc-shellshock">Shellshock</a>
+<a href="#nsc-skeleton-key">Skeleton Key</a>
+<a href="#nsc-wanda-brosch">Wanda Brosch</a>
+</nav>
+<article class="karte" id="nsc-agathe-bauer">
+<h3>Agathe Bauer</h3>
+<p class="werte">Ork, weiblich, 64 J. — Marktfrau(Gemüse)</p>
+<p>Eine kleine alte Dame mit festem Händedruck und freundlichen Augen. Sie steht jeden Markttag auf dem Platz und verkauft frisches Gemüse. Normalerweise trägt sie ein Daunenjacke und Handschuhe zu einer Jeans.</p>
+<p class="alltag"><span class="marke">Themen</span> Kaffeeklatsch, Häkeln</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-ali-sahin">
+<h3>Ali Sahin</h3>
+<p class="werte">Mensch, männlich, 40 J. — Dönermann</p>
+<p>Hochgewachsener Südländer mit glattem, schwarzen Haar. Er trägt einen Schnurrbart mit unrasierten Wangen. In der Regel trägt er eine weiße Schürze über einer Jogginghose und ein weißes Hemd.</p>
+<p class="alltag"><span class="marke">Themen</span> Go, Lebensweisheiten</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-bodo-klemm">
+<h3>Bodo mit dem Bagger</h3>
+<p class="werte">Zwerg, männlich, 45 J. — Betreiber des Senders Kiez-FM</p>
+<p>Rundlicher Zwerg um die 45, Kopfhörer um den Hals. Sein Container ist voller alter Mischpulte, Kabel und Röhrentechnik.</p>
+<p class="alltag"><span class="marke">Themen</span> Musik auflegen, Durchsagen, Vermisstenmeldungen, „Wetter&quot; (Blick aus dem Fenster), Verschwörungstheorien — manche stimmen sogar.</p>
+<p>„Ihr hört Kiez-FM — und Kiez-FM hört alles.&quot;</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-christine">
+<h3>Christine</h3>
+<p class="werte">Ork, weiblich, 35 J. — Ärztin an der Charité</p>
+<p class="alltag"><span class="marke">Themen</span> Selfmade Woman, Sie führt ein Traumleben</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-danuta-nowak">
+<h3>Danuta Nowak</h3>
+<p class="werte">Mensch, weiblich, 60 J. — Brieftaubenzucht und Rattenhaltung auf dem Containerdach</p>
+<p>Sehnige Frau um die sechzig, immer eine Feder irgendwo. Auf dem Containerdach ein Taubenschlag, darunter ein Rattenverschlag.</p>
+<p class="alltag"><span class="marke">Themen</span> Ausmisten, Tauben trainieren, sich lautstark mit agathe-bauer um Marktplatz-Zentimeter streiten.</p>
+<p>„Fass den Schlag an und du ziehst 'ne Hand zurück, die nicht mehr deine ist.&quot;</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-doreen-kalisch">
+<h3>Doreen Kalisch</h3>
+<p class="werte">Troll, weiblich, 52 J. — Steinmetzin, Friedhofsbetrieb Pankow (Grabsteine, Restaurierung, Abbruch)</p>
+<p>Trollfrau, 2,60 m, Unterarme wie Grabsteine, Staub in jeder Falte. Trägt Lederschürze, Schutzbrille auf der Stirn, Hörner kurz abgeschliffen (Arbeitsschutz). Redet wenig, und wenn, dann über Material: Bordstein ist Granit, Granit hält, alles andere ist Deko. Liefert Elster den Bruch aus Abriss und Grabräumung – Sandstein, Granit, Beton – und nimmt dafür keinen Nuyen, nur Verbandszeug.</p>
+<p class="alltag"><span class="marke">Themen</span> Skat, alte Grabinschriften abschreiben, Bier nach Feierabend auf dem Friedhof</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-emil-von-hausen">
+<h3>Dr. Emil von Hausen</h3>
+<p class="werte">Mensch, männlich — Genforscher, Duras Pharmaceuticals</p>
+<p>Entführungsziel des Skeleton-Key-Auftrags. Forscht an genetisch modifizierten Bakterien, die beliebige synthetische Arzneimittel herstellen sollen. Bei der Extraktion am 31.08.2024 von einem Scharfschützen schwer verletzt übergeben. NICHT im Original-Sheet-Roster — hier ergänzt aus dem Session-Log.</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-elisabeth-seeger">
+<h3>Elisabeth Seeger</h3>
+<p class="werte">weiblich — Statthalterin / Räumungsbeauftragte für Izel Markwart</p>
+<p>Geschäftsfrau, tritt aus einer weißen Limousine auf. Ließ die gewaltsame Räumungsaktion im Turf durchführen (Patrouillenschläger statt der bestellten Lone-Star-Truppe). NICHT im Original-Sheet-Roster — hier ergänzt aus dem Session-Log.</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-falk-eisenhauer">
+<h3>Falk Eisenhauer</h3>
+<p class="werte">Ork, männlich, 58 J. — Frührentner/Veteran</p>
+<p>stämmiger alter Mann, Kettenraucher (inkl. COPD Husten). Er trägt zumeist olivgrüne Klamotten aus uralten Armeebeständen und gibt sich allzeit kampfbereit, auch wenn sein Alter und seine Gesundheit einen Kampf unmöglich machen. In seiner Wohnung hat die Digitalisierung keinen Einzug gehalten. Der einzige Computer ist über ein Kabel an die Matrix angeschlossen und alle Bediengeräte sind aus dem Jahr 1980.</p>
+<p class="alltag"><span class="marke">Themen</span> Militärgeschichte, Manchmal muss man mit harter Hand durchgreifen</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-tobias-rehbein">
+<h3>Generalarzt Dr. Tobias Rehbein</h3>
+<p class="werte">Mensch, männlich, 45 J. — Generalarzt des Sanitätsdienstes der Bundeswehr, Bundeswehrkrankenhaus Berlin-Oranienburg, Katastrophenschutz Berlin</p>
+<p>Hochgewachsen, drahtig, graumeliert, Läuferstatur. Trägt auch in Zivil Bügelfalten. Spricht leise, sehr präzise, sieht beim Zuhören auf die Hände seines Gegenübers. Nimmt Elsters Anrufe immer an, stellt immer zuerst eine Gegenfrage. Hält Distanz, aber nie Überheblichkeit – er weiß, wer ihn ausgebildet hat.</p>
+<p class="alltag"><span class="marke">Themen</span> Marathon, Militärgeschichte (das hat er von Elster), Modellbau</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-jonas">
+<h3>Jonas</h3>
+<p class="werte">Elf, männlich, 22 J. — baut mit Mirella ihren Container zum Zuhause aus</p>
+<p>Zweiundzwanzig, Elf. Hämmert ein echtes Fenster in eine Blechwand — mit Rahmen, mit Dichtung, mit Kitt. An der Tür ein handgemaltes Schild „Willkommen&quot; mit Blumen drumherum.</p>
+<p class="alltag"><span class="marke">Themen</span> Schreinern, streichen, Pläne für das nächste Jahr machen.</p>
+<p>„In einem Jahr erkennst du das hier nicht wieder.&quot;</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-kolle">
+<h3>Kolle</h3>
+<p class="werte">Zwerg, männlich, 78 J. — (Edel)brenner</p>
+<p>ungepflegt, voller grauer Bart und irrer Blick.</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-lada">
+<h3>Lada</h3>
+<p class="werte">Troll, männlich (trans), 41 J. — Städtebauamt zuständig für Kanalisation</p>
+<p>Transmann, trägt Cortanzug und dazu eine Hornbrille. Er ist sehr zuvorkommend gegenüber Trollfrauen, sonst aber sehr unsicher.</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-maria-faust">
+<h3>Maria Faust</h3>
+<p class="werte">Mensch, weiblich, 25 J. — Einkaufsleiterin von Magicks'r'us</p>
+<p class="alltag"><span class="marke">Themen</span> Lebefrau, Femme Fatale, Parties, Flirten</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-mario">
+<h3>Mario</h3>
+<p class="werte">Mensch, männlich, 30 J. — Pizzafahrer</p>
+<p>trägt roten Helm und hat italienischen Akzent</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-mirella">
+<h3>Mirella</h3>
+<p class="werte">Mensch, weiblich, 24 J. — baut mit Jonas ihren Container zum Zuhause aus</p>
+<p>Vierundzwanzig, schleppt ständig Bretter und Farbeimer, Farbe im Gesicht. Mit <a href="#nsc-jonas">Jonas</a> und der acht Monate alten Tochter Suri.</p>
+<p class="alltag"><span class="marke">Themen</span> Schreinern, streichen, Fenster einsetzen. Ihr Container bekommt nach und nach alles, was ein Container nicht hat.</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-oma-trautchen">
+<h3>Oma Trautchen</h3>
+<p class="werte">Mensch, weiblich, 80 J. — Köchin des Freitischs</p>
+<p>Winzige gebückte Frau, Kittelschürze, Kelle in der Hand. Bürgerlich Waltraud Kissinger, aber so nennt sie niemand. Ihre Küche ist ein ausgebauter Seecontainer am zentralen Platz.</p>
+<p class="alltag"><span class="marke">Themen</span> Gemüse putzen, Töpfe rühren, dabei jeden ausfragen und alles wissen.</p>
+<p>„Erst isst du was, dann redest du.&quot;</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-berat-pinsel">
+<h3>Pinsel</h3>
+<p class="werte">Mensch, männlich, 10 J. — Botenkind, malt Wandbilder</p>
+<p>Bürgerlich Berat. Dünner Junge, ungefähr zehn, Kreidestaub an den Fingern, viel zu große Jeansjacke. Malt bunte Wandbilder auf die Container — Drachen, Raketen, Porträts der Bewohner.</p>
+<p class="alltag"><span class="marke">Themen</span> Botengänge, bewacht Räder gegen ein paar Nuyen, taucht überall auf, wo etwas los ist.</p>
+<p>„Ich hab dich auch gemalt. Willste sehen?&quot;</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-porscheklaus">
+<h3>Porscheklaus</h3>
+<p class="werte">Zwerg, männlich, 33 J. — veranstaltet illegale Rennen</p>
+<p>Er trägt idR ein Goldkettchen und ein nicht zugeknöpftes rotes Hemd. Dazu enge Jeans und Sonnenbrille</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-renate-sommer">
+<h3>Renate Sommer</h3>
+<p class="werte">Ork, weiblich, 63 J. — Marktfrau(Fisch)</p>
+<p>Die beste Freundin von Agathe. Sie steht jeden Markttag auf dem Platz und verkauft Fisch. Sie trägt eine schwarze Schürze bei der Arbeit und drunter eine rote Jacke und Jeans.</p>
+<p class="alltag"><span class="marke">Themen</span> Kaffeeklatsch, Stricken</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-shellshock">
+<h3>Shellshock</h3>
+<p class="werte">Elf, weiblich, 22 J. — Decker</p>
+<p>Man sieht dey idR nur als Avatar, eine menschengroße Schnappschildkröte mit sichtbaren Bauchmuskeln auf dem Panzer. IRL ist dey ein etwas übergewichtiger Elf mit fettigen blonden Haaren. Auf deyrem Wohncontainer ist ein großer Wal abgebildet</p>
+<p class="alltag"><span class="marke">Themen</span> Anime, Sex, Furries</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-skeleton-key">
+<h3>Skeleton Key</h3>
+<p class="werte">Elf, weiblich, 87 J. — Schieber</p>
+<p>redet nur durch die Sprechanlage und per Emails, trägt bei Treffen eine Skelettmaske, ist bereits grau und ihr alter ist deutlich sichtbar</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+<article class="karte" id="nsc-wanda-brosch">
+<h3>Wanda Brosch</h3>
+<p class="werte">Ork, weiblich, 44 J. — Teilehändlerin, Schrottplatz in Weißensee (halb legal, halb Vory-Umschlagplatz)</p>
+<p>Orkfrau, breit, kurze graue Haare, Blaumann über Thermounterhemd, immer eine Zigarette hinterm Ohr, die sie nie anzündet. Redet in Preisen. Freundlich, solange die Rechnung stimmt; hält Sandro für den einzigen Kurier, der nie gefragt hat, was im Paket ist.</p>
+<p class="alltag"><span class="marke">Themen</span> Motorradrennen (nur zuschauen), Wodka, Buchführung – sie führt zwei Bücher</p>
+<a class="zurueck" href="#leute">↑ zur Liste</a>
+</article>
+</section>
+</main>
+<footer>
+<p class="stumm">Stand: <span class="zahl">03.10.2026</span> · erzeugt aus dem Kampagnen-Repo.</p>
+<p class="stumm">Hier steht nur, was die Gruppe weiß. Fehlt etwas, das ihr erlebt habt? Sagt Michael Bescheid.</p>
+</footer>
+</body>
+</html>
